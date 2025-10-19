@@ -1,0 +1,126 @@
+/* Basic Reset and Variables */
+:root {
+    --primary: #333;
+    --secondary: #f5f5f5;
+    --accent: #1976d2;
+    --text: #222;
+    --white: #fff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background: var(--secondary);
+    color: var(--text);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.7;
+}
+
+nav {
+    background: var(--primary);
+    color: var(--white);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: background 0.2s;
+    border-radius: 4px;
+}
+nav ul li a:hover, nav ul li a:focus {
+    background: var(--accent);
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px rgba(0,0,0,.08);
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.posts-preview {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.posts-preview article {
+    background: var(--secondary);
+    padding: 1rem;
+    border-radius: 6px;
+    flex: 1 1 250px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.posts-preview article a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--accent);
+    text-decoration: underline;
+    font-size: 0.95rem;
+}
+
+.blog-post {
+    border-bottom: 1px solid #ececec;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+.blog-post:last-child {
+    border: none;
+}
+
+h1, h2, h3 {
+    color: var(--primary);
+}
+.meta {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 0 0 8px 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    main {
+        padding: 1rem;
+    }
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+    .posts-preview {
+        flex-direction: column;
+    }
+}
